@@ -2,6 +2,8 @@ package com.example;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 
 /**
@@ -20,6 +22,7 @@ public class ProductEntity {
     private String test;
 
     @Column
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     public long getId() {
